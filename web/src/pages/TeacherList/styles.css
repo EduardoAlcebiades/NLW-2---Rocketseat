@@ -1,0 +1,71 @@
+#page-teacher-list {
+    width: 100vw;
+    height: 100vh;
+}
+
+#search-techers {
+    margin-top: 3.2rem;
+}
+
+#search-techers label {
+    color: var(--color-text-in-primary);
+}
+
+#search-techers button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 5.6rem;
+
+    margin-top: 3.2rem;
+    background: var(--color-secondary);
+    border: 0;
+    border-radius: 0.8rem;
+
+    font: 700 1.6rem Archivo;
+    color: var(--color-button-text);
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+}
+
+#search-techers button:hover {
+    background: var(--color-secondary-dark);
+}
+
+#page-teacher-list main {
+    width: 90%;
+
+    margin: 3.2rem auto;
+}
+
+@media (min-width: 700px) {
+    #page-teacher-list {
+        max-width: 100%;
+    }
+
+    #search-techers {
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 16px;
+
+        position: absolute;
+        bottom: -20px;
+    }
+
+    #search-techers .input-block + .input-block,
+    #search-techers .select-block + .select-block {
+        margin-top: 0;
+    }
+
+    #page-teacher-list main {
+        padding: 3.2rem 0;
+        max-width: 740px;
+        margin: 0 auto;
+    }
+}
